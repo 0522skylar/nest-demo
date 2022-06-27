@@ -1,0 +1,193 @@
+/* 
+@font-face {
+    font-family: op-design;
+    src: url('../fonts/heiti.woff') format('truetype');
+} */
+
+
+/* 繁体+简体+特殊字符 */
+.text {
+  font-family: op-design;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.usually {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+.box {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left {
+  padding: 10px;
+  margin-right: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, 0.37);
+}
+
+.right {
+  padding: 10px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+.instructions {
+  text-align: center;
+}
+.bottomdash {
+  border-bottom: 1px solid #c2e7b0;
+  padding: 10px;
+}
+.setup {
+  width: 800px;
+  padding: 20px;
+  border: 1px solid #c2e7b0;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+.writeBox {
+  display: block;
+  resize: vertical;
+  padding: 5px 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  width: 400px;
+  font-size: inherit;
+  color: #606266;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  margin-bottom: 30px;
+
+}
+.writeBox:focus {
+  outline: none;
+  border-color: #c2e7b0;
+}
+button,.submit {
+  display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #67c23a;
+    background: #f0f9eb;
+    border: 1px solid #c2e7b0;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+button:hover {
+  background-color: #67c23a;
+  color: #fff;
+}
+
+.submit:hover {
+  background-color: #67c23a;
+  color: #fff;
+}
+
+.fileUpload {
+  position: relative;
+  display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #67c23a;
+    background: #f0f9eb;
+    border: 1px solid #c2e7b0;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.fileUpload input {
+  position: absolute;
+  width: 60px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+#filettf, #initfile {
+  display: none;
+}
+.fileUpload:hover {
+  background-color: #67c23a;
+  color: #fff;
+}
+.red {
+  color: red;
+  font-weight: 700;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+.mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.7);
+  z-index: 10;
+  text-align: center;
+}
+.progress-9 {
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 400px auto;
+  background:
+      radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%) center left,
+      radial-gradient(var(--r1) var(--r2) at bottom, #269af2 79.5%, #0000 80%) center center,
+      radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%) center right,
+      #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+  33% {
+      background-position: 0% 33%, 100% 33%, 200% 33%
+  }
+
+  66% {
+      background-position: -100% 66%, 0% 66%, 100% 66%
+  }
+
+  100% {
+      background-position: 0% 100%, 100% 100%, 200% 100%
+  }
+}
