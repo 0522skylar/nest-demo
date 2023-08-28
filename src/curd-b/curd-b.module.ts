@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CurdBService } from './curd-b.service';
 import { CurdBController } from './curd-b.controller';
-import { CurdAModule } from 'src/curd-a/curd-a.module';
+// import { CurdAModule } from 'src/curd-a/curd-a.module';
 
 @Module({
   imports: [

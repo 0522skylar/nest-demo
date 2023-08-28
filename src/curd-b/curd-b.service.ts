@@ -13,6 +13,7 @@ export class CurdBService {
   }
 
   findAll() {
+    // 没有在module注入curdAService，也能使用curdAService的方法，因为curdAService是全局变量了，可以随意访问
     return `This action returns all curdB` + this.CurdAService.findAll();
   }
 
