@@ -10,7 +10,7 @@ export class AaaGuard implements CanActivate {
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
     const requiredRoles = this.reflector.get<Role[]>('roles', context.getHandler());
-    console.log(requiredRoles, 11111)
+    // console.log(requiredRoles, 11111) 设置的权限
     if (!requiredRoles) {
       return true
     }

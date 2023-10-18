@@ -16,9 +16,11 @@ export class AppController {
   @Get()
   @UseFilters(AaaFilter)
   @UseGuards(AaaGuard)
+  // 添加权限控制
   @Roles(Role.Admin)
+  // 然后在 handler 上添加这个装饰器，参数为 admin，也就是给这个 handler 添加了一个 roles 为 admin 的metadata
   getHello(): string {
-    throw new AaaException('aaa', 'bbbb')
+    // throw new AaaException('aaa', 'bbbb')
     return this.appService.getHello();
   }
 }
