@@ -1,5 +1,10 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseFilters, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
+import { AaaException } from './AaaException';
+import { AaaFilter } from './aaa.filter';
+import { AaaGuard } from './aaa.guard';
+import { Role } from './role'
+import { Roles } from './role.decorator';
 
 // 因为 Service 是可以被注入也是可以注入到别的对象的，所以用 @Injectable 声明。
 
@@ -9,8 +14,11 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
+  @UseFilters(AaaFilter)
+  @UseGuards(AaaGuard)
+  @Roles(Role.Admin)
   getHello(): string {
-    debugger;
+    throw new AaaException('aaa', 'bbbb')
     return this.appService.getHello();
   }
 }
