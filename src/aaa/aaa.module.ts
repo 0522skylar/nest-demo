@@ -1,7 +1,11 @@
-import { Module } from '@nestjs/common';
+import { Module, forwardRef } from '@nestjs/common';
 import { AaaController } from './aaa.controller';
+import { BbbModule } from 'src/bbb/bbb.module';
 
 @Module({
-  controllers: [AaaController]
+  controllers: [AaaController],
+  imports: [
+    forwardRef(() => BbbModule)
+  ]
 })
 export class AaaModule {}
