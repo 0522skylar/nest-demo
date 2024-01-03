@@ -14,7 +14,7 @@ export class AaaGuard implements CanActivate {
     if (!requiredRoles) {
       return true
     }
-
+    console.log(this.reflector.get('aaa', context.getHandler()), 111);
     const { user } = context.switchToHttp().getRequest();
     return requiredRoles.some((role) => user && user.roles?.include(role))
   }
