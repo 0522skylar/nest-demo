@@ -7,6 +7,7 @@ import { HomeService } from "./home.service";
 import { AppService } from "./app.service";
 import { AdminService } from "./admin.service";
 
+// IOC
 @Module({
   imports: [],
   controllers: [AppController, AdminController, HomeController],
