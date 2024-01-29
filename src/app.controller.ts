@@ -7,8 +7,10 @@ import {
   HttpStatus,
   Request,
   Render,
+  UseInterceptors,
 } from "@nestjs/common";
 import { AppService } from "./app.service";
+import { TestInterceptor } from "./test.interceptor";
 
 // 因为 Service 是可以被注入也是可以注入到别的对象的，所以用 @Injectable 声明。
 
@@ -17,6 +19,7 @@ import { AppService } from "./app.service";
 export class AppController {
   constructor(private readonly appService: AppService) {}
   @Get()
+  @UseInterceptors(TestInterceptor)
   @Render("./index")
   getHello(@Response() res): object {
     // res.render('./views/index.html');
